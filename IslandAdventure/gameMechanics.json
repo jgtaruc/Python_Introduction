@@ -1,0 +1,134 @@
+{
+    "Premise": "You wake up on an island with no memory of how you got there. You need to overcome a series of obstacles in order to be able to to board a pirate ship and sail it to civilization.",
+    "IntroText": "You have just awakened on a strange island with a terrible headache. You can't remember anything about yourself or where you are.",
+    "IslandText": "The island is forested with banana trees. Most of the bananas are green, but one tree to your west might have ripe bananas. There are ominous drums in the background. There is a ship to your east with a gangplank to the shore.",
+    "SailText": "The ship is really big and it will take at least another extra pair of hands to successfully sail it towards civilization",
+    "SailTextAlt": "You successfully sailed the ship towards civilization",
+    "Tiles": {
+        "Empty": {
+            "kind": "empty",
+            "description_short": "An empty tile",
+            "description_long": "An empty tile"
+        },
+        "Top_Deck_Ladder": {
+            "kind": "top_deck_ladder",
+            "description_short": "Your in the top deck of the ship",
+            "description_long": "The top deck has a wheel at the north end of the ship, and the south end of the ship has a ladder down to the lower deck. There is a large gorilla by the ship's wheel."
+        },
+        "Ship_Wheel": {
+            "kind": "ship_wheel",
+            "description_short": "You are at the wheel.",
+            "description_long": "You are at the wheel. There is a hostile gorilla preventing you from approaching the wheel."
+        },
+        "Bottom_Deck_Ladder": {
+            "kind": "bottom_deck_ladder",
+            "description_short": "Your in the bottom deck of the ship",
+            "description_long": "The deck below is dimly lit, and smells musty. You can make out three doors. One is to the east, one is to the west, and one is a trapdoor below you."
+        },
+        "Galley": {
+            "kind": "galley",
+            "description_short": "This is the galley.",
+            "description_long": "This is the galley. It is mostly empty, but in a shadowy corner you see a parrot sitting on a perch."
+        },
+        "Brig": {
+            "kind": "brig",
+            "description_short": "This is the brig.",
+            "description_long": "This is the brig. In this room there is a prisoner in a locked cell."
+        },
+        "Captain_Quarters": {
+            "kind": "captain_quarters",
+            "description_short": "This is the captain's quarters.",
+            "description_long": "This is the captain's quarters. In this room there is a bed and a table(There is a knife in the table)"
+        },
+        "Cargo_Hold": {
+            "kind": "cargo_hold",
+            "description_short": "This is the cargo hold.",
+            "description_long": "You've entered the cargo hold. There are barrels, a pile of tools, and a trunk."
+        },
+        "Plank": {
+            "kind": "plank",
+            "description_short": "You can use this plank to go to the island or board the ship.",
+            "description_long": "You can use this plank to go to the island or board the ship. Beware of strange things in the island."
+        },
+        "Banana_Tree": {
+            "kind": "banana_tree",
+            "description_short": "There is a large banana tree.",
+            "description_long": "There is a large banana tree here. (There is one bunch of ripe bananas on the tree within reach.)"
+        }
+    },
+    "Directions": ["n", "north", "e", "east", "s", "south", "w", "west"],
+    "Character": {
+        "type": "main_character",
+        "integrity": 3,
+        "description": "A person who one day woke up on an unknown island. Having no recollection of what happened decided to sail the pirate ship towards civilization.",
+        "inventory_limit": 3
+    },
+    "Native_Chief": {
+        "type": "native",
+        "integrity": 4,
+        "description": "The chief of a native tribe in an unknown island. He really fancies shiny stuff.",
+        "name": "Shiny Rare Chieftain",
+        "position": "chief",
+        "item": "banana",
+        "dialog": "Shiny things, I want!!!"
+    },
+    "Native": {
+        "type": "native",
+        "integrity": 3,
+        "description": "A member of the native tribe in an unknown island. This guy follows the chief wherever he goes.",
+        "name": "Native Grunt",
+        "position": "grunt",
+        "dialog": "..."
+    },
+    "Parrot": {
+        "type": "parrot",
+        "integrity": 1,
+        "description": "The pirate captain's most trusted crew member. He will never say anything other than lorem ipsum...",
+        "name": "Pierrot",
+        "known_words": ["hello", "polly", "cracker"],
+        "dialog": ["lorem", " ipsum", " dolor", " sit", " amet"],
+        "alt_dialog": "Lorem! There is a secret compartment in the captain's quarters. Lorem!!!"
+    },
+    "Gorilla": {
+        "type": "gorilla",
+        "integrity": 7,
+        "description": "",
+        "name": "Rampage Kong",
+        "dialog": "HUHU HA HA!!!",
+        "alt_dialog": "huhu haha"
+    },
+    "Prisoner": {
+        "type": "prisoner",
+        "integrity": 3,
+        "description": "A crew of the stranded pirate ship. He seems to know you.",
+        "name": "One eyed Popeye",
+        "dialog": "I'm so glad you're alive. The captain locked me up for cheating at cards, which is the only reason the islanders didn't capture me. They killed everyone else. Now I guess we're the only two left, which makes you captain since you were first mate. Go find the keys to unlock this door, and we can sail out of here.",
+        "alt_dialog": "Let's leave this scary island and sail towards civilization!!!"
+    },
+    "Items": {
+        "Knife": {
+            "type": "knife",
+            "integrity": 3,
+            "description": "An item that could be use to cut things",
+            "name": "Knife"
+        },
+        "Key": {
+            "type": "key",
+            "integrity": 9999,
+            "description": "A key that could open locked things",
+            "name": "Chest key"
+        },
+        "Banana": {
+            "type": "banana",
+            "integrity": 1,
+            "description": "Tasty ripe banana if given to somebody will surely make their day",
+            "name": "Banana"
+        },
+        "Treasure": {
+            "type": "treasure",
+            "integrity": 99,
+            "description": "Shiny shimmering thing that will surely make someone your friend",
+            "name": "Gold bar"
+        }
+    }
+}
