@@ -161,3 +161,26 @@ class Native(GameObject):
 
     def talk(self):
         return self.dialog
+
+
+class Tile:
+    def __init__(self, kind, x, y, objs, canGO, description, description_short, asset=None):
+        self.id = str(x)+str(y)
+        self.kind = kind
+        self.posx = x
+        self.posy = y
+        self.object = objs
+        self.canGo = canGO
+        self.description_long = description
+        self.description_short = description_short
+        if asset is not None:
+            self.asset = asset
+
+    def location(self):
+        return (self.posx, self.posy)
+
+    def description(self):
+        if self.__reached:
+            return self.description_short
+        else:
+            return self.description_long
