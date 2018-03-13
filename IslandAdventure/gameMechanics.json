@@ -4,6 +4,15 @@
     "IslandText": "The island is forested with banana trees. Most of the bananas are green, but one tree to your west might have ripe bananas. There are ominous drums in the background. There is a ship to your east with a gangplank to the shore.",
     "SailText": "The ship is really big and it will take at least another extra pair of hands to successfully sail it towards civilization",
     "SailTextAlt": "You successfully sailed the ship towards civilization",
+    "Objectives": {
+        "knife": "You obtained a knife from the captain's quarters",
+        "gorilla": "You gave the grumpy gorilla a banana. The gorilla was satisfied and has given you access to the ship's wheel.",
+        "cell_key": "Pierre the parrot has told you that there is a hidden compartment in the captain's quarters that contains the key to the prisoner's cell.",
+        "prisoner": "You successfully freed One Eyed Popeye from his cell. He is willing to help you sail the ship towards civilization.",
+        "chest_key": "You obtained what it seems to be a key to a chest.",
+        "treasure": "You found a treasure in the Cargo Hold.",
+        "natives": "You gave the native chief a very shiny treasure. Now, the island natives treats you as their dear friend."
+    },
     "Tiles": {
         "Empty": {
             "kind": "empty",
@@ -56,7 +65,6 @@
             "description_long": "There is a large banana tree here. (There is one bunch of ripe bananas on the tree within reach.)"
         }
     },
-    "Directions": ["n", "north", "e", "east", "s", "south", "w", "west"],
     "Character": {
         "type": "main_character",
         "integrity": 3,
@@ -203,5 +211,22 @@
         ["   ", " |-", "---", "   ", "   ", "   ", "   ", "   ", "   ", "   ", " / ", "   "],
         ["   ", " \\ ", "   ", "  |", "G  ", "|  ", "   ", "   ", "   ", " / ", "   ", "   "],
         ["   ", "   ", "___", "___", "___", "___", "___", "___", "___", "   ", "   ", "   "]
+    ],
+    "Verbs": [
+        "move",
+        "go",
+        "take",
+        "give",
+        "search",
+        "look",
+        "eat",
+        "cut",
+        "drop",
+        "unlock",
+        "sail",
+        "open"
+    ],
+    "Directions": [
+        "n", "north", "e", "east", "s", "south", "w", "west"
     ]
 }

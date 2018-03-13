@@ -1,3 +1,26 @@
+class GameState():
+    def __init__(self, character, characterPos, currentMap, hasKnife, isGorillaAngry, hasBanana, hasBrigKey, isPrisonerFreed, hasChestKey, hasTreasure, areNativesHostile, visitedTiles, objectives, initialValues):
+        self.__character = character
+        self.characterPos = characterPos
+        self.__currentMap = currentMap
+        self.hasKnife = hasKnife
+        self.isGorillaAngry = isGorillaAngry
+        self.hasBanana = hasBanana
+        self.hasBrigKey = hasBrigKey
+        self.isPrisonerFreed = isPrisonerFreed
+        self.hasChestKey = hasChestKey
+        self.hasTreasure = hasTreasure
+        self.areNativesHostile = areNativesHostile
+        self.visitedTiles = visitedTiles
+        self.objectives = objectives
+        self.initialValues = initialValues
+
+    def save(self):
+        return
+    
+    def load(self):
+        return
+
 
 class GameObject():
     def __init__(self, itemtype, integrity, description):
@@ -163,7 +186,7 @@ class Native(GameObject):
         return self.dialog
 
 
-class Tile:
+class Tile():
     def __init__(self, kind, x, y, objs, canGO, description, description_short, asset=None):
         self.id = str(x)+str(y)
         self.kind = kind
