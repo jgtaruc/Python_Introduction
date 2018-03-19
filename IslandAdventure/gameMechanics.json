@@ -1,7 +1,7 @@
 {
-    "Premise": "You wake up on an island with no memory of how you got there. You need to overcome a series of obstacles in order to be able to to board a pirate ship and sail it to civilization.",
+    "Premise": "You are stranded on an island with no memory of how you got there. You need to overcome a series of obstacles in order to be able to to board a pirate ship and sail it to civilization.",
     "IntroText": "You have just awakened on a strange island with a terrible headache. You can't remember anything about yourself or where you are.",
-    "IslandText": "The island is forested with banana trees. Most of the bananas are green, but one tree to your west might have ripe bananas. There are ominous drums in the background. There is a ship to your east with a gangplank to the shore.",
+    "IslandText": "The island is forested with banana trees. But one tree to your west might have ripe bananas. There are ominous drums in the background. There is a ship to your south with a gangplank to the shore.",
     "SailText": "The ship is really big and it will take at least another extra pair of hands to successfully sail it towards civilization",
     "SailTextAlt": "You successfully sailed the ship towards civilization",
     "Objectives": {
@@ -120,6 +120,12 @@
             "description": "An item that could be use to cut things",
             "name": "Knife"
         },
+        "BrigKey": {
+            "type": "key",
+            "integrity": 9999,
+            "description": "A key that could open the Brig",
+            "name": "Brig key"
+        },
         "Key": {
             "type": "key",
             "integrity": 9999,
@@ -140,21 +146,21 @@
         }
     },
     "Positions": {
-        "Character": {"x": 11, "y": 0},
-        "Banana":    {"x": 1,  "y": 0},
-        "Gorilla":   {"x": 9,  "y": 8},
-        "Wheel":     {"x": 10, "y": 8},
-        "LadderUD":  {"x": 4,  "y": 8},
-        "CaptnQtr":  {"x": 2,  "y": 8},
-        "CrgoHold":  {"x": 4,  "y": 6},
-        "LadderLD":  {"x": 4,  "y": 6},
-        "Galley":    {"x": 4,  "y": 10},
-        "Brig":      {"x": 2,  "y": 8},
-        "Knife":     {"x": 2,  "y": 8},
-        "Prisoner":  {"x": 2,  "y": 8},
-        "Parrot":    {"x": 4,  "y": 10},
-        "Key":       {"x": 2,  "y": 8},
-        "Treasure":  {"x": 4,  "y": 6}
+        "Character": {"y": 8, "x": 8},
+        "Banana":    {"y": 1,  "x": 0},
+        "Gorilla":   {"y": 9,  "x": 8},
+        "Wheel":     {"y": 10, "x": 8},
+        "LadderUD":  {"y": 4,  "x": 8},
+        "CaptnQtr":  {"y": 2,  "x": 8},
+        "CrgoHold":  {"y": 4,  "x": 6},
+        "LadderLD":  {"y": 4,  "x": 6},
+        "Galley":    {"y": 4,  "x": 10},
+        "Brig":      {"y": 2,  "x": 8},
+        "Knife":     {"y": 2,  "x": 8},
+        "Prisoner":  {"y": 2,  "x": 8},
+        "Parrot":    {"y": 4,  "x": 10},
+        "Key":       {"y": 2,  "x": 8},
+        "Treasure":  {"y": 4,  "x": 6}
     },
     "Map1": [
         [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -215,16 +221,23 @@
     "Verbs": [
         "move",
         "go",
+        "look",
+        "eat",
+        "drop",
+        "save",
+        "load",
+        "quit"
+    ],
+    "Frame_Verbs": [
+        "inventory",
         "take",
         "give",
         "search",
-        "look",
-        "eat",
         "cut",
-        "drop",
         "unlock",
         "sail",
-        "open"
+        "open",
+        "back"
     ],
     "Directions": [
         "n", "north", "e", "east", "s", "south", "w", "west"

@@ -1,8 +1,8 @@
 class GameState():
-    def __init__(self, character, characterPos, currentMap, hasKnife, isGorillaAngry, hasBanana, hasBrigKey, isPrisonerFreed, hasChestKey, hasTreasure, areNativesHostile, visitedTiles, objectives, initialValues):
-        self.__character = character
+    def __init__(self, character, characterPos, currentMap, hasKnife, isGorillaAngry, hasBanana, hasBrigKey, isPrisonerFreed, hasChestKey, hasTreasure, areNativesHostile, visitedTiles, objectives, map1, map2):
+        self.character = character
         self.characterPos = characterPos
-        self.__currentMap = currentMap
+        self.currentMap = currentMap
         self.hasKnife = hasKnife
         self.isGorillaAngry = isGorillaAngry
         self.hasBanana = hasBanana
@@ -13,7 +13,8 @@ class GameState():
         self.areNativesHostile = areNativesHostile
         self.visitedTiles = visitedTiles
         self.objectives = objectives
-        self.initialValues = initialValues
+        self.map1 = map1
+        self.map2 = map2
 
     def save(self):
         return
@@ -64,6 +65,14 @@ class Inventory():
         self.__list.append(item)
         return True
 
+    def remove(self, item_name):
+        
+            
+    def check(item):
+        for item in self.showItems():
+            if item.name == item:
+                return True
+        return False
     def drop(self, index):
         if len(self.__list) == 0:
             return False
@@ -84,7 +93,7 @@ class Character(GameObject):
     def __init__(self, itemtype, integrity, description, inventory_limit, name, items=None):
         GameObject.__init__(self, itemtype, integrity, description)
         self.__name = name
-        self.__inventory = Inventory(inventory_limit, items)
+        self.inventory = Inventory(inventory_limit, items)
 
     def name(self):
         return self.__name
@@ -95,8 +104,10 @@ class Character(GameObject):
     def dropItem(self, index):
         return self.__inventory.drop(index)
 
+    def getItemfromInventory(self, item):
+
     def inventory(self):
-        return self.__inventory.showItems()
+        return self.inventory.showItems()
 
 
 class Gorilla(GameObject):
@@ -192,7 +203,7 @@ class Tile():
         self.kind = kind
         self.posx = x
         self.posy = y
-        self.object = objs
+        self.objects = objs
         self.canGo = canGO
         self.description_long = description
         self.description_short = description_short
